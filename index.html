@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="Nexa home">
+  <span class="brand-ball">♾️</span>
+  <span>Nexa</span></a>
+  <nav class="top-actions" aria-label="Main navigation">
+  <button class="icon-btn active" data-view="home" title="Home">⌂</button>
+  <button class="icon-btn" data-view="friends" title="Friends">♧</button>
+  <button class="icon-btn notification-btn" data-view="notifications" title="Notifications">♡<b id="notificationCount">3</b></button>
+  <button class="profile-mini" data-view="profile"><span class="avatar navy blue">S</span><span>Sadia</span></button>
+  </nav>
+  </header>
+
+<main class="layout">
+  <aside class="sidebar left-sidebar">
+  <div class="profile-card">
+  <div class="cover"></div>
+  <div class="profile-info">
+  <span class="avatar navy blue">S</span>
+  <h3>Sadia Rasheed</h3>
+  <p>@sadia</p>
+  <div class="profile-stats">
+  <span><strong>248</strong> Friends</span>
+  <span><strong>36</strong> Posts</span>
+  </div>
+  </div>
+  </div>
+
+  <div class="menu-card">
+  <button class="side-link active" data-view="home">🏠 <span>Home</span></button>
+  <button class="side-link" data-view="profile">👤 <span>My Profile</span></button>
+  <button class="side-link" data-view="friends">👥 <span>Friends</span></button>
+  <button class="side-link" data-view="notifications">🔔 <span>Notifications</span></button>
+  <button class="side-link" data-view="messages">💬 <span>Messages</span></button>
+  <button class="side-link" data-view="settings">⚙️ <span>Settings & Privacy</span></button>
+  </div>
+
+  <div class="tip-card">
+  <span class="spark">♾️</span>
+  <strong>Stay connected</strong>
+  <p>Share moments, meet friends and keep your community close.</p>
+  </div>
+  </aside>
+
+<section class="feed" id="app">
+  <div class="view home-view">
+  <div class="stories-card">
+  <div class="section-heading">
+  <h2>Stories</h2>
+  <button class="text-btn" id="viewStories">View all</button>
+  </div>
+  <div class="stories">
+  <button class="story create-story" id="createStory">
+  <span class="story-avatar yellow">+</span>
+  <span>Add story</span>
+  </button>
+  <button class="story" data-story="Sadia">
+  <span class="story-avatar img-avatar one">S</span>
+  <span>Sadia</span>
+  </button>
+  <button class="story" data-story="Ayesha">
+  <span class="story-avatar img-avatar two">A</span>
+  <span>Ayesha</span>
+  </button>
+  <button class="story" data-story="Hamza">
+  <span class="story-avatar img-avatar three">H</span>
+  <span>Hamza</span>
+  </button>
+  <button class="story" data-story="Mariam">
+  <span class="story-avatar img-avatar four">M</span>
+  <span>Mariam</span>
+  </button>
+  <button class="story" data-story="Ali">
+  <span class="story-avatar img-avatar five">A</span>
+  <span>Ali</span>
+  </button>
+  </div>
+  </div>
+
+  <div class="composer-card">
+  <div class="composer-row">
+  <span class="avatar yellow">S</span>
+  <button class="composer-input" id="openComposer">What's on your mind, Sadia?</button>
+  </div>
+  <div class="composer-actions">
+  <button id="photoBtn">📷 Photo</button>
+  <button id="videoBtn">🎥 Video</button> 
+  <button id="feelingBtn">😊 Feeling</button>
+  </div>
+  </div>
+  <div id="posts"></div>
+  </div>
+  <div class="view hidden" id="friendsView"></div>
+  <div class="view hidden" id="notificationsView"></div>
+  <div class="view hidden" id="profileView"></div>
+  <div class="view hidden" id="messagesView"></div>
+  <div class="view hidden" id="settingsView"></div>
+</section>
+
+<aside class="sidebar right-sidebar">
+  <div class="widget">
+  <div class="widget-title">
+  <h3>People you may know</h3>
+  <button class="text-btn">See all</button>
+  </div>
+  <div class="person">
+  <span class="avatar pink">A</span>
+  <div><strong>Ayesha Khan</strong><small>5 mutual friends</small></div>
+  <button class="add-friend" data-name="Ayesha Khan">+</button>
+  </div>
+  <div class="person">
+  <span class="avatar blue">H</span>
+  <div><strong>Hamza Ali</strong><small>8 mutual friends</small></div>
+  <button class="add-friend" data-name="Hamza Ali">+</button>
+  </div>
+  <div class="person">
+  <span class="avatar purple">M</span>
+  <div><strong>Mariam Noor</strong><small>3 mutual friends</small></div>
+  <button class="add-friend" data-name="Mariam Noor">+</button>
+  </div>
+  </div>
+
+  <div class="widget">
+  <div class="widget-title"><h3>Trending on Nexa</h3></div>
+  <div class="trend"><span>#WebDevelopment</span><small>1.2K posts</small></div>
+  <div class="trend"><span>#NexaCommunity</span><small>842 posts</small></div>
+  <div class="trend"><span>#UIUXDesign</span><small>615 posts</small></div>
+  </div>
+
+  <footer>© 2026 Nexa · Privacy · Terms · Help</footer>
+  </aside>
+  </main>
+
+  <div class="modal hidden" id="composerModal">
+  <div class="modal-box">
+  <button class="close" data-close>×</button>
+  <h2>Create post</h2>
+  <textarea id="postText" placeholder="What's on your mind?"></textarea>
+  <div class="upload-preview" id="uploadPreview"></div>
+  <div class="modal-actions">
+  <label class="upload-label">📷 Add photo
+  <input id="imageInput" type="file" accept="image/*" hidden>
+  </label>
+  <label class="upload-label">🎥 Add video
+  <input id="videoInput" type="file" accept="video/*" hidden>
+  </label>
+  <button class="primary-btn" id="publishPost">Post</button>
+  </div>
+  </div>
+  </div>
+
+  <div class="modal hidden" id="storyModal">
+  <div class="story-viewer">
+  <button class="close light" data-close>×
+  </button>
+  <div class="story-progress"><span></span></div>
+  <div class="story-user"><span class="avatar yellow">S</span><strong id="storyName">Sadia</strong></div>
+  <div class="story-content" id="storyContent">♾️</div>
+  <button class="story-arrow left" id="prevStory">‹</button>
+  <button class="story-arrow right" id="nextStory">›</button>
+  </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <input id="hiddenFileInput" type="file" hidden>
+  <script src="script.js"></script>
+</body>
+</html>
