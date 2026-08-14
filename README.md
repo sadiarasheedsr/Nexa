@@ -3,7 +3,8 @@
 A modern, responsive social networking frontend built with **HTML5, CSS3, and JavaScript**. Nexa provides a social-media-style interface for stories, posts, likes, comments, friends, notifications, profiles, messages, and settings.
 
 ## 🚀 Live Demo
-👉
+👉 https://sadiarasheedsr.github.io/Nexa/
+
 ## ✨ Features
 
 - 🏠 Home feed with dynamic posts
